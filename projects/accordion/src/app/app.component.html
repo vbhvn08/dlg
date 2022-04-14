@@ -1,0 +1,4 @@
+<dlg-custom-accordion *ngFor="let faq of faqs$ | async" [faq]="faq">
+  <dlg-accordion-header header [faq]="faq"></dlg-accordion-header>
+  <dlg-accordion-body body [faq]="faq"></dlg-accordion-body>
+</dlg-custom-accordion>

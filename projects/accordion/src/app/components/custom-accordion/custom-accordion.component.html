@@ -1,0 +1,33 @@
+<div class="collapsible">
+  <button
+    type="button"
+    class="header"
+    (click)="toggle()"
+    [ngClass]="{ background__gray: !isCollapsed }"
+  >
+    <div class="header-wrapper">
+      <ng-content select="[header]"></ng-content>
+    </div>
+    <div class="icon">
+      <svg
+        class="svg-rotate__icon"
+        width="16px"
+        height="16px"
+        viewBox="0 0 357 357"
+        [ngClass]="{ icon__plus: !isCollapsed }"
+      >
+        <g id="add">
+          <path d="M357,204H204v153h-51V204H0v-51h153V0h51v153h153V204z" />
+        </g>
+      </svg>
+    </div>
+  </button>
+
+  <div class="body">
+    <div #content class="panel" [ngStyle]="{ 'max-height': height }">
+      <div class="body-wrapper">
+        <ng-content select="[body]"></ng-content>
+      </div>
+    </div>
+  </div>
+</div>

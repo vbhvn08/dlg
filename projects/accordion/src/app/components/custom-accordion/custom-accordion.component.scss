@@ -1,0 +1,51 @@
+.header,
+.body {
+  width: 100%;
+  background: none;
+}
+
+.header {
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+}
+
+.panel {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 150ms ease-out;
+}
+
+.body-wrapper {
+  border-bottom: 2px solid;
+}
+
+.icon {
+  height: 24px;
+  width: 24px;
+  line-height: 28px;
+  vertical-align: middle;
+  background-color: #ffd400;
+}
+
+.icon__plus {
+  transform: rotate(45deg);
+  transition: transform 150ms ease-out;
+}
+
+.svg-rotate__icon {
+  transition: transform 150ms ease-out;
+}
+
+.header-wrapper {
+  flex-grow: 1;
+  text-align: left;
+}
+
+.background__gray {
+  background-color: #a9a9a9;
+}
