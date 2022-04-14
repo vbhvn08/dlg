@@ -16,9 +16,23 @@ describe('CustomAccordionComponent', () => {
 
   beforeEach(async () => {
     spectator = createComponent();
+    spectator.component.faq = {
+      id: '1',
+      question: 'Question 1',
+      answer: 'Answer 1'
+    }
   });
 
   it('should create', () => {
     expect(spectator.component).toBeTruthy();
+  });
+
+  it('should expand accordion', () => {
+    spectator.detectChanges();
+    const closePanel = spectator.query('.panel');
+    expect(closePanel).toHaveStyle({'max-height': '0px'});
+    spectator.click('.header');
+    const openPanel = spectator.query('.panel');
+    expect(openPanel).toHaveStyle({'max-height': '32px'});
   });
 });

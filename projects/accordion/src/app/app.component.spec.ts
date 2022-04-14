@@ -10,15 +10,15 @@ describe('AppComponent', () => {
 
   const faqsMockService = {
     getFaqs: () => of([
-        {
-          "id": "1",
-          "question": "Question 1",
-          "answer": "Answer 1"
-        },
       {
-        "id": "2",
-        "question": "Question 2",
-        "answer": "Answer 2"
+        id: '1',
+        question: 'Question 1',
+        answer: 'Answer 1'
+      },
+      {
+        id: '2',
+        question: 'Question 2',
+        answer: 'Answer 2'
       },
     ]),
   };
@@ -42,7 +42,7 @@ describe('AppComponent', () => {
     expect(spectator.component).toBeTruthy();
   });
 
-  it('should create the app', () => {
+  it('should render accordion', () => {
     spectator.detectChanges();
     const accordions = spectator.queryAll('dlg-custom-accordion');
     expect(accordions.length).toBe(2);
