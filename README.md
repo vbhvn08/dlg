@@ -1,5 +1,9 @@
 # Dlg
 
+![CI](https://github.com/vbhvn08/dlg/actions/workflows/test.yml/badge.svg) CI pipelines
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/2ad29fab-750d-4ab4-aa57-0e78da268b95/deploy-status)](https://app.netlify.com/sites/lustrous-treacle-0b1c21/deploys)
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.1.
 
 ## Development server
@@ -16,7 +20,7 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 ## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Run `yarn test` to execute the unit tests via [Jest](https://jestjs.io/docs/testing-frameworks).
 
 ## Running end-to-end tests
 
